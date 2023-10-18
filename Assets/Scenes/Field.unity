@@ -608,8 +608,8 @@ MonoBehaviour:
   jumpForce: 125
   gravityModifier: 1.5
   fallMultiplier: 2.5
-  wait: 2.5
   jumping: 0
+  wait: 2.5
 --- !u!1001 &257326554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2312,6 +2312,7 @@ MonoBehaviour:
   jumpForce: 100
   gravityModifier: 1.5
   fallMultiplier: 10
+  speed: 45.5
   wait: 0
   jumping: 0
 --- !u!1 &858417733 stripped
@@ -2422,6 +2423,7 @@ MonoBehaviour:
   gravityModifier: 1.5
   fallMultiplier: 8
   jumping: 0
+  wait: 2.5
 --- !u!1001 &905070570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2670,8 +2672,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7242535afe069974eb66ddcd63f817c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playercam: {fileID: 0}
-  camOn: 0
 --- !u!1001 &949015344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3089,10 +3089,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 829cd9ead8ef369459ad6fcee6d2ae10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playercam: {fileID: 0}
-  camOn: 0
-  speedH: 2
-  speedV: 2
 --- !u!20 &1041097804
 Camera:
   m_ObjectHideFlags: 0
@@ -4263,8 +4259,8 @@ MonoBehaviour:
   jumpForce: 125
   gravityModifier: 1.5
   fallMultiplier: 15
-  wait: 0.15
   jumping: 0
+  wait: 0.15
 --- !u!1001 &1637895597
 PrefabInstance:
   m_ObjectHideFlags: 0
