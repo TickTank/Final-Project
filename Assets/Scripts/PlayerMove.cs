@@ -1,20 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    private float horizontalInput;
-    private float verticalInput;
-    private float speed = 10f;
-    
-    void Start()
-    {
-        
-        verticalInput = Input.GetAxis("Vertical");
-    }
+    float horizontalInput;
+    float verticalInput;
+    float speed = 7f;
 
-    // Update is called once per frame
+    Camera playercam;
+
+    private void Start()
+    {
+        playercam = GameObject.Find("playerCamera").GetComponent<Camera>();
+    }
     void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
@@ -24,6 +21,8 @@ public class PlayerMove : MonoBehaviour
 
     void Move()
     {
-        transform.Translate(Time.deltaTime * speed * horizontalInput,0,Time.deltaTime * speed * verticalInput);
+        transform.Translate(Time.deltaTime * speed * horizontalInput,0,Time.deltaTime * speed * verticalInput,Space.World);
+
+        //transform.position = new Vector3(Time.deltaTime * speed * horizontalInput,0,Time.deltaTime * speed * verticalInput) + playercam.transform.forward * speed * Time.deltaTime;
     }
 }
