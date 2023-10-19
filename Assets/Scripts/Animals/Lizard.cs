@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-// INHERIT FROM ANIMAL CLASS
+// INHERITANCE FROM ANIMAL CLASS
 public class Lizard : Animal
 {
     [SerializeField] bool jumping = false;
@@ -20,12 +20,12 @@ public class Lizard : Animal
             playerRB.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime; }
     }
 
-    public override void AnimalJump(float jumpForce) //POLYMORPHED FUNCTION FROM ANIMAL CLASS
+    public override void AnimalJump(float jumpForce) //POLYMORPHISM
     {
         if (!jumping) { playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse); jumpNum++; jumping = true; }
     }
 
-    public override IEnumerator Wait(float wait) { //POLYMORPHED FUNCTION FROM ANIMAL CLASS
+    public override IEnumerator Wait(float wait) { //POLYMORPHISM
         yield return new WaitForSeconds(wait);
         jumping = false; }
 
