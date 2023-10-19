@@ -19,6 +19,6 @@ public class TitleLoad : MonoBehaviour
     {
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
-        timeText.text = seconds.ToString();
+        if (seconds >= 0) { timeText.text = seconds.ToString(); }
     }
 }
